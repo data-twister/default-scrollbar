@@ -30,3 +30,5 @@ I followed this tutorial: https://developer.chrome.com/extensions/getstarted
 # License
 
 MIT
+
+## Attribution  Extension created by: Yuval Greenfield, modified/maintained by: mithereal@gmail.com
