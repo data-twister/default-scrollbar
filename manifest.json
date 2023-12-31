@@ -8,22 +8,22 @@
     ],
     "description": "Fix the custom scrollbars that some sites have by deleting scrollbar CSS rules.",
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "service_worker.js"
     },
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "popup/popup.html",
         "default_icon": {
-            "16": "images/wheel_16.png",
-            "32": "images/wheel_32.png",
-            "48": "images/wheel_48.png",
-            "128": "images/wheel_128.png"
+            "16": "icons/wheel_16.png",
+            "32": "icons/wheel_32.png",
+            "48": "icons/wheel_48.png",
+            "128": "icons/wheel_128.png"
         }
     },
     "icons": {
-        "16": "images/wheel_16.png",
-        "32": "images/wheel_32.png",
-        "48": "images/wheel_48.png",
-        "128": "images/wheel_128.png"
+        "16": "icons/wheel_16.png",
+        "32": "icons/wheel_32.png",
+        "48": "icons/wheel_48.png",
+        "128": "icons/wheel_128.png"
     },
     "content_scripts": [
         {

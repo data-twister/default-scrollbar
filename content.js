@@ -16,7 +16,6 @@ function getBackToDefaultScrollbars() {
                     continue;
                 }
                 if (rule.selectorText.indexOf("::-webkit-scrollbar") >= 0) {
-                    console.log("deleting scrollbar css rule at", sheet.href);
                     console.debug("css rule deleted is", rule);
                     sheet.deleteRule(i--);
                 } else if (rule.selectorText.indexOf("scrollbar") >= 0) {
@@ -24,7 +23,7 @@ function getBackToDefaultScrollbars() {
                     // that if we delete them will break the file edit page.
                     // So this section is an attempt to debug similar cases if
                     // they arise.
-                    console.debug("fishy scrollbar selector rule, but not deleting", rule);
+                    console.debug("unknown scrollbar selector rule, not deleting", rule);
                 }
             }
         } catch (e) {
@@ -34,4 +33,7 @@ function getBackToDefaultScrollbars() {
     };
 }
 
+chrome.storage.local.get("enabled").then(function(result){
+if(result.enabled == true){
 setInterval(getBackToDefaultScrollbars, 2000);
+}})
